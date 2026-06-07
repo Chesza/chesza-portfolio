@@ -265,7 +265,7 @@ function App() {
       </section>
                 
       {/* Let's Build Something Meaningful */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
+      <section id="contact" className="max-w-6xl mx-auto px-6 py-16">
         <div className="mb-4">
           <span className="text-sm font-semibold tracking-wider text-sky-400 border-l-4 border-sky-400 pl-3">
             LET'S CONNECT
