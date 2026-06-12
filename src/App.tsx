@@ -1,5 +1,6 @@
 import loanDashboard from './assets/loan.chesza.com.png'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import AIResearchLab from './components/IResearchLab';
 function App() {
   return (
     <main className="min-h-[85vh] bg-slate-950 text-white">
@@ -221,7 +222,7 @@ function App() {
           </div>
         </div>
       </section>
-                
+      <AIResearchLab />        
       {/* My Journey */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         {/* Encabezado */}
