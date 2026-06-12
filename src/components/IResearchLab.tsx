@@ -342,7 +342,7 @@ const pipelineSteps = [
 ];
 
 export default function AIResearchLab() {
-  const [openIndex, setOpenIndex] = useState<number>(0);
+  const [openIndex, setOpenIndex] = useState<number>(-1);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [currentPhaseImages, setCurrentPhaseImages] = useState<string[]>([]);
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
@@ -352,14 +352,20 @@ export default function AIResearchLab() {
     setOpenIndex(isOpening ? index : -1);
   };
 
-  useEffect(() => {
-    if (openIndex !== -1 && buttonRefs.current[openIndex]) {
-      buttonRefs.current[openIndex]?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }
-  }, [openIndex]);
+  const isFirstRender = useRef(true);
+
+useEffect(() => {
+  if (isFirstRender.current) {
+    isFirstRender.current = false;
+    return;
+  }
+  if (openIndex !== -1 && buttonRefs.current[openIndex]) {
+    buttonRefs.current[openIndex]?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
+}, [openIndex]);
 
   const openLightbox = (images: string[], index: number) => {
     setCurrentPhaseImages(images);
