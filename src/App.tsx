@@ -42,48 +42,15 @@ function App() {
       </section>
 
       {/* What I Build */}
-       <section className="max-w-6xl mx-auto px-6 py-16">
+      <section className="max-w-6xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold mb-10">What I Build</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          {/* Business Applications*/}
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-cyan-400 transition flex flex-col">
-            <h3 className="text-2xl font-semibold mb-3 text-cyan-400">Business Applications</h3>
-            <p className="text-slate-300 mb-4">
-              Full-stack applications designed to solve real business problems, streamline operations, and improve decision-making.
-            </p>
-            <div className="flex flex-wrap gap-2 mt-auto">
-              {['React', 'TypeScript', 'Node.js', 'C#', 'SQL'].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 bg-slate-800 rounded-full text-sm text-slate-300 border border-cyan-400/40"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-            
-          {/* AI & Automation*/}
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-rose-400 transition flex flex-col">
-            <h3 className="text-2xl font-semibold mb-3 text-rose-400">AI & Automation</h3>
-            <p className="text-slate-300 mb-4">
-              Intelligent workflows, AI-powered assistants, and process automation that reduce repetitive work and increase efficiency.
-            </p>
-            <div className="flex flex-wrap gap-2 mt-auto">
-              {['AI Agents', 'OpenAI', 'MCP', 'Workflow Automation'].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 bg-slate-800 rounded-full text-sm text-slate-300 border border-rose-400/40"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-            
-          {/* Digital Experiences*/}
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-amber-400 transition flex flex-col">
-            <h3 className="text-2xl font-semibold mb-3 text-amber-400">Digital Experiences</h3>
+          {/* Digital Experiences - link a Featured Project */}
+          <a
+            href="#projects"
+            className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-amber-400 transition flex flex-col group cursor-pointer"
+          >
+            <h3 className="text-2xl font-semibold mb-3 text-amber-400 group-hover:text-amber-300 transition">Digital Experiences</h3>
             <p className="text-slate-300 mb-4">
               Websites, interfaces, and digital products that combine usability, design, and business goals.
             </p>
@@ -92,6 +59,45 @@ function App() {
                 <span
                   key={tech}
                   className="px-3 py-1 bg-slate-800 rounded-full text-sm text-slate-300 border border-amber-400/40"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </a>
+            
+          {/* AI & Automation - link a AI Research Lab */}
+          <a
+            href="#ai-research-lab"
+            className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-cyan-400 transition flex flex-col group cursor-pointer"
+          >
+            <h3 className="text-2xl font-semibold mb-3 text-cyan-400 group-hover:text-cyan-300 transition">AI & Automation</h3>
+            <p className="text-slate-300 mb-4">
+              Intelligent workflows, AI-powered assistants, and process automation that reduce repetitive work and increase efficiency.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-auto">
+              {['AI Agents', 'OpenAI', 'MCP', 'Workflow Automation'].map((tech) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1 bg-slate-800 rounded-full text-sm text-slate-300 border border-cyan-400/40"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </a>
+            
+          {/* Business Applications - sin link por ahora */}
+          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-rose-400 transition flex flex-col">
+            <h3 className="text-2xl font-semibold mb-3 text-rose-400">Business Applications</h3>
+            <p className="text-slate-300 mb-4">
+              Full-stack applications designed to solve real business problems, streamline operations, and improve decision-making.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-auto">
+              {['React', 'TypeScript', 'Node.js', 'C#', 'SQL'].map((tech) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1 bg-slate-800 rounded-full text-sm text-slate-300 border border-rose-400/40"
                 >
                   {tech}
                 </span>
