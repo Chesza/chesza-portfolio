@@ -22,10 +22,12 @@ import phase5Img from '../assets/images/ai-lab/Checkpoint-ResumePipelineRecovery
 import phase6Img from '../assets/images/ai-lab/project_pipeline.png';
 import phase6Img2 from '../assets/images/ai-lab/system_guard.png';
 import phase6Img3 from '../assets/images/ai-lab/intent_router.png';
-import phase7Img1 from '../assets/images/ai-lab/phase31-recovery-git-history.png';
-import phase7Img2 from '../assets/images/ai-lab/dashboard.png';
-import phase7Img3 from '../assets/images/ai-lab/terminal-endpoints.png';
-import phase7Img4 from '../assets/images/ai-lab/phase31-distributed-kernel-files.png';
+// Imágenes para Phase 31 - nueva estructura narrativa
+import phase7ImgDashboard from '../assets/images/ai-lab/dashboard.png';
+import phase7ImgGitLog from '../assets/images/ai-lab/phase31-recovery-git-history.png';
+import phase7ImgImportError from '../assets/images/ai-lab/phase31-runtime-startup-recovered-modules.png';
+import phase7ImgFileTree from '../assets/images/ai-lab/phase31-distributed-kernel-files.png';
+import phase7ImgTerminal from '../assets/images/ai-lab/dashboardTurboHealthy.png';
 import devStudioImg1 from '../assets/images/ai-lab/main-ui.png';
 import devStudioImg2 from '../assets/images/ai-lab/review-fix-diff.png';
 import devStudioImg6 from '../assets/images/ai-lab/review-fix.png';
@@ -194,59 +196,157 @@ const phases = [
     ],
   },
   {
-    title: 'Phase 31 Recovery & Distributed Kernel Recovery',
-    period: 'June 2026',
-    description:
-      'Recovered a previously abandoned distributed execution branch that had been rolled back months earlier.\n\n' +
-      'The original branch contained advanced work that extended the system from a local AI assistant into a distributed execution kernel featuring durable execution, multi-node coordination, consensus protocols, chaos engineering, and formal verification research.\n\n' +
-      'Using historical Git references, archived notes, and surviving branch snapshots, the system was reconstructed and partially reactivated.',
-    tags: [
-      'Distributed Systems', 'Durable Execution', 'Checkpointing', 'Consensus',
-      'Raft', 'Chaos Engineering', 'Formal Verification', 'System Recovery',
-      'Git Forensics', 'Architecture Archaeology'
-    ],
-    galleryImages: [
-      { src: phase7Img1, caption: 'Git log --oneline showing phases 20–31' },
-      { src: phase7Img2, caption: 'Dashboard functioning after recovery' },
-      { src: phase7Img3, caption: 'Terminal with /stats-live, /menu, /stream/{request_id}' },
-      { src: phase7Img4, caption: 'Recovered file tree: node_registry.py, distributed_scheduler.py, persistent_queue.py, orchestrator.py, execution_graph.py, state_rebuilder.py' }
-    ],
-    whatWasRecovered: [
-      { category: 'Durable Execution System', items: ['Persistent Queue', 'Checkpointing', 'Crash Recovery', 'Replayable State', 'Resumable Workers'] },
-      { category: 'Distributed Execution', items: ['Node Registry', 'Distributed Scheduler', 'Task Leasing', 'Failure Recovery', 'Global Coordination'] },
-      { category: 'Consensus Layer', items: ['Leader Election', 'Global Ordering', 'Deduplication', 'State Reconciliation'] },
-      { category: 'Advanced Research', items: ['Raft-based Consensus', 'Multi-Region Coordination', 'Chaos Engineering', 'Formal Verification', 'Lean Proof Skeleton'] }
-    ],
-    recoveryProcess: [
-      'Recovered historical commits: Phase 20 → Durable Execution System (97aa3b6)',
-      'Phase 21 → Distributed Multi-Node Execution (84708d7)',
-      'Phase 22 → Consensus-Aware Distributed Kernel (69e00da)',
-      'Phase 23 → Raft Consensus Layer (a426cfd)',
-      'Phase 24 → Formal Verification + Chaos Engineering (66f8341)',
-      'Phase 31 → Architecture Freeze + Lean Verification (de0ad4a)'
-    ],
-    importGraphRepair: [
-      'from app.node_registry import ...',
-      'from app.distributed_scheduler import ...',
-      'from app.persistent_queue import ...'
-    ],
-    validationResults: [
-      'FastAPI startup',
-      'Runtime telemetry',
-      'Adaptive performance modes',
-      'System Dashboard',
-      'Distributed runtime modules',
-      'SSE streaming endpoint connectivity'
-    ],
-    verifiedEndpoints: ['/stats-live', '/menu', '/test-connection', '/stream/{request_id}'],
-    keyFinding: 'The rollback had not destroyed the distributed kernel. The implementation survived inside preserved Git branches and could still be restored and executed after repairing the dependency graph.',
-    learnings: [
-      'Git history can preserve months of engineering work long after a rollback.',
-      'Distributed systems are significantly harder to refactor than monolithic architectures.',
-      'Architectural archaeology is sometimes required to understand large AI systems.',
-      'Recovery efforts can reveal capabilities that were believed to be permanently lost.'
-    ]
+  title: 'Phase 31 Recovery & Distributed Runtime Validation',
+  period: 'June 2026',
+  description:
+    'Recovered a previously abandoned distributed execution branch that had been rolled back months earlier.\n\n' +
+    'The original branch contained advanced work that extended the system from a local AI assistant into a distributed execution kernel featuring durable execution, multi-node coordination, consensus protocols, chaos engineering, and formal verification research.\n\n' +
+    'Using historical Git references, archived notes, and surviving branch snapshots, the system was successfully recovered and validated.',
+  tags: [
+    'Distributed Systems', 'Durable Execution', 'Checkpointing', 'Consensus',
+    'Raft', 'Chaos Engineering', 'Formal Verification', 'System Recovery',
+    'Git Forensics', 'Architecture Archaeology', 'Runtime Validation'
+  ],
+  // Hero Image (resultado final, grande)
+  heroImage: {
+    src: phase7ImgDashboard,
+    caption: 'Phase 31 runtime successfully restored after reconstructing the distributed execution kernel and dependency graph..'
   },
+  // Galería de 4 imágenes en cuadrícula 2x2 (historia técnica)
+  galleryImages: [
+    {
+      src: phase7ImgGitLog,
+      caption: 'Git archaeology across Phases 20–31.'
+    },
+    {
+      src: phase7ImgImportError,
+      caption: 'Recovered modules and successful runtime startup.'
+    },
+    {
+      src: phase7ImgFileTree,
+      caption: 'Recovered distributed execution kernel modules.'
+    },
+    {
+      src: phase7ImgTerminal,
+      caption: 'End-to-end request execution validation.'
+    }
+  ],
+  whatWasRecovered: [
+    {
+      category: 'Durable Execution System',
+      items: [
+        'Persistent Queue',
+        'Checkpointing',
+        'Crash Recovery',
+        'Replayable State',
+        'Resumable Workers'
+      ]
+    },
+    {
+      category: 'Distributed Execution',
+      items: [
+        'Node Registry',
+        'Distributed Scheduler',
+        'Task Leasing',
+        'Failure Recovery',
+        'Global Coordination'
+      ]
+    },
+    {
+      category: 'Consensus Research Layer',
+      items: [
+        'Leader Election',
+        'Global Ordering',
+        'Deduplication',
+        'State Reconciliation'
+      ]
+    },
+    {
+      category: 'Advanced Research Artifacts',
+      items: [
+        'Raft Consensus Prototype',
+        'Multi-Region Coordination Research',
+        'Chaos Engineering Framework',
+        'Formal Verification Layer',
+        'Lean Proof Skeleton'
+      ]
+    }
+  ],
+  recoveryProcess: [
+    'Recovered historical commits: Phase 20 → Durable Execution System (97aa3b6)',
+    'Phase 21 → Distributed Multi-Node Execution (84708d7)',
+    'Phase 22 → Consensus-Aware Distributed Kernel (69e00da)',
+    'Phase 23 → Raft Consensus Layer (a426cfd)',
+    'Phase 24 → Formal Verification + Chaos Engineering (66f8341)',
+    'Phase 31 → Architecture Freeze + Lean Verification (de0ad4a)',
+    'Phase 31 Runtime Validation (June 2026)'
+  ],
+  importGraphRepair: [
+    'from app.node_registry import ...',
+    'from app.distributed_scheduler import ...',
+    'from app.persistent_queue import ...'
+  ],
+  rootCauseAnalysis: {
+    primaryCause: 'Module relocation without synchronized import graph updates.',
+    examples: ['node_registry.py', 'distributed_scheduler.py', 'persistent_queue.py'],
+    details: 'were moved into backend/app/ while multiple components still referenced the old paths. This produced cascading import failures that prevented FastAPI startup and created the appearance of a broken architecture. The underlying execution kernel remained intact.'
+  },
+  recoveryMetrics: {
+    branches: 4,
+    phases: '20 → 31',
+    modules: '6+',
+    endpoints: '5+',
+    commitsRecovered: '12+',
+    runtime: 'YES',
+    dashboard: 'YES',
+    streamingLayer: 'YES',
+    orchestrator: 'YES',
+    executionEngine: 'YES'
+  },
+  runtimeRecoveryEvidence: [
+    '✓ FastAPI backend startup',
+    '✓ Dashboard operational',
+    '✓ Task menu operational',
+    '✓ Intent routing operational',
+    '✓ Planning engine operational',
+    '✓ Execution engine operational',
+    '✓ SSE event streaming operational',
+    '✓ Resource governance operational',
+    '✓ Adaptive performance modes operational',
+    '✓ Planner generated execution plans',
+    '✓ Code generation tasks executed',
+    '✓ Live telemetry verified',
+    '✓ End-to-end request execution verified'
+  ],
+  validationResults: [
+    'FastAPI startup',
+    'System Dashboard',
+    'Task Menu',
+    'Intent Routing',
+    'Planning Engine',
+    'Execution Engine',
+    'Runtime Telemetry',
+    'Adaptive Performance Modes',
+    'SSE Streaming Connectivity',
+    'End-to-End Request Execution'
+  ],
+  verifiedEndpoints: ['/stats-live', '/menu', '/test-connection', '/stream/{request_id}'],
+  keyFinding: 'The distributed kernel was never lost. The apparent architectural failure was caused by import graph corruption introduced during refactoring. After reconstructing the dependency graph and restoring critical runtime modules, the Phase 31 system successfully booted, streamed events, executed plans, generated code, and validated its distributed runtime architecture.',
+  engineeringLessons: [
+    'Architectural failures can be caused by dependency drift rather than defective system design.',
+    'Large distributed systems require dependency graph validation after major refactors.',
+    'Git history can serve as a long-term disaster recovery mechanism.',
+    'Runtime validation is required before declaring a historical architecture permanently lost.',
+    'Recovering abandoned systems often requires software archaeology techniques.'
+  ],
+  learnings: [
+    'Git history can preserve months of engineering work long after a rollback.',
+    'Distributed systems are significantly harder to refactor than monolithic architectures.',
+    'Architectural archaeology is sometimes required to understand large AI systems.',
+    'Recovery efforts can reveal capabilities that were believed to be permanently lost.',
+    'Import graph corruption can mimic architectural failure — always verify the difference.'
+  ]
+},
   {
     title: 'AI Dev Studio',
     period: 'May 2026',
@@ -496,7 +596,33 @@ useEffect(() => {
               {isOpen && (
                 <div className={`mt-3 ml-12 space-y-4 mb-12 ${isSpecial ? 'space-y-6' : ''}`}>
                   <div className="space-y-2">
-                    {phase.galleryImages ? (
+                    {/* Hero Image (grande) - prioridad máxima para fase 7 */}
+                    {phase.heroImage && (
+                      <div className="mb-4">
+                        <div
+                          className="rounded-xl overflow-hidden border border-slate-700 bg-slate-900 cursor-pointer transition hover:opacity-90"
+                          onClick={() => {
+                            // Recolectar todas las imágenes: hero + gallery
+                            const heroImages = [phase.heroImage.src];
+                            const galleryImages = phase.galleryImages?.map(img => img.src) || [];
+                            const allImages = [...heroImages, ...galleryImages];
+                            openLightbox(allImages, 0);
+                          }}
+                        >
+                          <img
+                            src={phase.heroImage.src}
+                            alt="Dashboard recovered"
+                            className="w-full h-auto object-contain opacity-80"
+                          />
+                        </div>
+                        <p className="text-xs text-slate-400 italic mt-2 text-center max-w-3xl mx-auto">
+                          {phase.heroImage.caption}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Galería de imágenes en cuadrícula 2x2 - para fase 7 */}
+                    {phase.galleryImages && phase.galleryImages.length > 0 && !phase.heroImage && (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {phase.galleryImages.map((img, idx) => (
                           <div key={idx}>
@@ -518,7 +644,38 @@ useEffect(() => {
                           </div>
                         ))}
                       </div>
-                    ) : phase.secondaryImages ? (
+                    )}
+
+                    {/* Caso especial: fase 7 con heroImage + galleryImages (mostrar galería debajo) */}
+                    {phase.heroImage && phase.galleryImages && phase.galleryImages.length > 0 && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                        {phase.galleryImages.map((img, idx) => (
+                          <div key={idx}>
+                            <div
+                              className="rounded-xl overflow-hidden border border-slate-700 bg-slate-900 cursor-pointer transition hover:opacity-90"
+                              onClick={() => {
+                                const heroImages = [phase.heroImage.src];
+                                const galleryImages = phase.galleryImages.map(img => img.src);
+                                const allImages = [...heroImages, ...galleryImages];
+                                openLightbox(allImages, idx + 1);
+                              }}
+                            >
+                              <img
+                                src={img.src}
+                                alt={img.caption}
+                                className="w-full h-48 md:h-56 object-cover opacity-80"
+                              />
+                            </div>
+                            <p className="text-xs text-slate-400 italic mt-2 text-center">
+                              {img.caption}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* secondaryImages (Resilience Engineering) */}
+                    {!phase.heroImage && !phase.galleryImages && phase.secondaryImages && (
                       <>
                         <div
                           className="rounded-xl overflow-hidden border border-slate-700 bg-slate-900 cursor-pointer transition hover:opacity-90"
@@ -550,7 +707,10 @@ useEffect(() => {
                           ))}
                         </div>
                       </>
-                    ) : phase.image2 ? (
+                    )}
+
+                    {/* image2 (fases 1-5) */}
+                    {!phase.heroImage && !phase.galleryImages && !phase.secondaryImages && phase.image2 && (
                       <div className="flex flex-col md:flex-row gap-4">
                         <div className="flex-1">
                           <div
@@ -587,7 +747,10 @@ useEffect(() => {
                           )}
                         </div>
                       </div>
-                    ) : (
+                    )}
+
+                    {/* Una sola imagen (caso fase 7 no aplica, pero por compatibilidad) */}
+                    {!phase.heroImage && !phase.galleryImages && !phase.secondaryImages && !phase.image2 && phase.image && (
                       <div
                         className="rounded-xl overflow-hidden border border-slate-700 cursor-pointer transition hover:opacity-90"
                         onClick={() => openLightbox(phaseImages, 0)}
