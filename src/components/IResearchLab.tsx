@@ -23,7 +23,7 @@ import phase6Img from '../assets/images/ai-lab/project_pipeline.png';
 import phase6Img2 from '../assets/images/ai-lab/system_guard.png';
 import phase6Img3 from '../assets/images/ai-lab/intent_router.png';
 // Imágenes para Phase 31 - nueva estructura narrativa
-import phase7ImgDashboard from '../assets/images/ai-lab/dashboard.png';
+import phase7ImgDashboard from '../assets/images/ai-lab/hero-dashboard-chat.png';
 import phase7ImgGitLog from '../assets/images/ai-lab/phase31-recovery-git-history.png';
 import phase7ImgImportError from '../assets/images/ai-lab/phase31-runtime-startup-recovered-modules.png';
 import phase7ImgFileTree from '../assets/images/ai-lab/phase31-distributed-kernel-files.png';
