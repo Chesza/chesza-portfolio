@@ -480,8 +480,9 @@ export default function AIResearchLab() {
             return images;
           };
 
+          const galleryImages = 'galleryImages' in phase && phase.galleryImages ? phase.galleryImages : [];
           const phaseImages = getAllImages();
-
+          
           return (
             <div key={phase.title} className="relative">
               <button
@@ -535,9 +536,9 @@ export default function AIResearchLab() {
                       </div>
                     )}
 
-                    {phase.galleryImages && phase.galleryImages.length > 0 && !phase.heroImage && (
+                    {galleryImages.length > 0 && !phase.heroImage && (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {phase.galleryImages.map((img, idx) => (
+                        {galleryImages.map((img: { src: string; caption: string }, idx: number) => (
                           <div key={idx}>
                             <div
                               className="rounded-xl overflow-hidden border border-slate-700 bg-slate-900 cursor-pointer transition hover:opacity-90"
