@@ -1,5 +1,6 @@
 import loanDashboard from './assets/loan.chesza.com.png'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import emailPreviewImg from './assets/images/email-preview.png';
 import AIResearchLab from './components/IResearchLab';
 import jsonToSqlImg from './assets/images/json-to-sql-generator.png';
 import { XMarkIcon } from '@heroicons/react/24/outline';
@@ -205,6 +206,12 @@ function App() {
                 >
                   View on GitHub
                 </a>
+                 <button
+                  onClick={() => document.getElementById('email-preview-modal')?.classList.remove('hidden')}
+                  className="px-5 py-2.5 bg-amber-500 rounded-lg font-medium text-sm hover:bg-amber-400 transition inline-flex items-center gap-2"
+                >
+                  ✉️ Email Notification
+                </button>
               </div>
             </div>
                 
@@ -928,6 +935,37 @@ function App() {
               Close Case Study
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* Email Preview Modal */}
+      <div
+        id="email-preview-modal"
+        className="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+        onClick={(e) => {
+          if (e.target === e.currentTarget) {
+            document.getElementById('email-preview-modal')?.classList.add('hidden');
+          }
+        }}
+        onKeyDown={(e) => {
+          if (e.key === 'Escape') {
+            document.getElementById('email-preview-modal')?.classList.add('hidden');
+          }
+        }}
+      >
+        <div className="relative max-w-[90vw] max-h-[90vh]">
+          <img
+            src={emailPreviewImg}
+            alt="Email Preview - Loan Management System"
+            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+          />
+          <button
+            onClick={() => document.getElementById('email-preview-modal')?.classList.add('hidden')}
+            className="absolute top-2 right-2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition"
+            aria-label="Cerrar"
+          >
+            <XMarkIcon className="w-6 h-6" />
+          </button>
         </div>
       </div>
 
